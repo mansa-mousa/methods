@@ -1,3 +1,5 @@
+# Array Methods
+
 .map()
 copies an array populated with the result of the function it's given to every element
 let array = [1,2,3,4]
@@ -68,3 +70,92 @@ const array = [1000, 25, 50, 500]
 console.log(array.every((item) => {
 item < 1000 
 })
+
+# String methods
+
+.charAt()
+Returns the character at the given index.
+const string = "Hello you!"
+console.log(string.charAt(0))
+
+.charCodeAt()
+Returns the UTF-16 unicode at the given index.
+const string = "I think that pretty much sums it up."
+console.log(string.charCodeAt(0))
+
+.concat()
+Concatenates the string called upon with the string given as parameter.
+It takes two parameters, separated by a comma. First parameter is with what the strings are concatenated with (space or comma). Second parameter is the second string that concatenates to the first string.
+const con = "The worst thing about prison was"
+let cat = "the dementors."
+console.log(con.concat(" ", cat)
+
+.includes()
+Checks wether a string contains a substring and returns true of false.
+const sentence = "The brown fox jumps."
+const word = "fox"
+console.log(sentence.includes(word))
+
+.indexOf()
+Returns the index of a substring within a string.
+If there is nog match, it returns -1.
+const name = "Dwight K. Shrute"
+const userSearch = "Shrute"
+console.log(name.indexOf(userSearch))
+
+.match()
+Returns an array of matching strings.
+const string = "Why are you the way that you are? I hate so much about the things that you choose to be."
+console.log(string.match(/[A-Z]/g))
+
+.repeat()
+It returns a new string that repeats the string it's called upon the given amount of times in the parentheses.
+const lyrics = "Lose yourself to dance. "
+console.log( `The lyrics for Daft Punk's Lose Yourself to Dance are: ${lyrics.repeat(100)}`)
+
+.replace()
+Returns a string replaced by a replacement string.
+It takes two parameters comma separated, first the pattern that needs to be replaced, second the string that you're going to replace it with.
+It takes either a string or regex as the pattern.
+With the string as replacement, it will only replace the first occurrence.
+But with a regex you can globally replace all matches (using the g option).
+const string = "Hello world! My name is also world. How funny."
+const stringPattern = "world"
+const regexPatter = /world/gi
+const replacement = "Michael"
+console.log(string.replace(stringPattern, replacement)
+console.log(string.replace(regexPattern, replacement)
+
+.search()
+Checks whether a specific word exist in a string.
+let fruits = "Pear, Orange, Apricot, Apple, Mango"
+console.log(fruits.toLowerCase( ).search("apple"))
+
+.split()
+Takes a separator as the parameter and it returns an array of strings.
+const quote = "I'm not superstitious, but I am a little stitious."
+const words = quote.split(' ')
+
+.substr()
+Returns a part of the string, starting at the specified index till the specified index if given.
+It takes two parameters. First the starting index, second (optional) the last index.
+const str = "Bob Vance"
+console.log(str.substr(4))
+console.log(str.substr(0, 2))
+
+.toLowerCase()
+Returns a string with all lower case letter.
+const string = "size DOES matter."
+console.log(string.toLowerCase())
+
+.toUpperCase()
+Returns a string with all caps.
+const quite = "all caps means yelling on the internet."
+const yell = quite.toUpperCase()
+console.log(yell)
+
+.trim()
+Removes whitespace from the beginning and end of a string.
+Useful for user input fields.
+const string = "      Can I have a coffee please, black.    "
+console.log(string.trim())
